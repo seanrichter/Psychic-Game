@@ -1,14 +1,83 @@
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { ... }
+  html {
+      height: 100%;
+      box-sizing: border-box;
+  }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { ... }
+  body {
+      background-image: url("https://argyleoracle.com.au/wp-content/uploads/2013/04/Psychic-44.jpg");
+      font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 16px;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-size: cover;
+  }
 
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { ... }
+  h1, h2 {
+      text-align: center;
+      color: aqua;
+      padding: 20px;
+      margin: 20px;
+  }
 
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) { ... }
+  p {
+    text-align: center;
+    color: aqua;
+    font-size: 24px;
+  }
 
-/* Extra large devices (large desktops) */
-/* No media query since the extra-large breakpoint has no upper bound on its width */
+  .containter {
+      width: 100%;
+      max-width: 950px;
+      margin: 0 auto;
+  }
+
+  #space {
+      margin-top: 15px;
+  }
+
+  .footer {
+      right: 0;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      background: #DBA5DF;
+      text-align: center;
+      font-size: 30px;
+      color: #4A5BD2;
+      padding: 1rem;
+  }
+
+  /*MEDIA QUERIES*/
+
+  @media screen and (max-width: 980px) {
+      #psychic-image {
+          margin-left: 175px;
+      }
+      #psychic {
+          margin-left: 165px;
+      }
+      #psychics-image {
+          margin-right: 180px;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+      #psychic {
+          margin-left: 170px;
+      }
+  }
+
+  @media only screen and (max-width: 640px) {
+      h2 {
+          margin-left: 70px;
+      }
+      #psychic-image {
+          margin-left: 150px;
+      }
+      #psychic {
+          margin-left: 145px;
+      }
+      #psychics-image {
+          margin-right: 100px;
+      }
+  }

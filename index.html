@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
+    <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -17,61 +18,7 @@
         <p>Your Guesses so far:</p>
     </div>
 
-    <script type="text/javascript">
-        
-        var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
-        var wins = 0;
-        var losses = 0;
-        var numGuesses = 9;
-        var guessChoices = [];
-        // added variables
-        
-        
-        document.onkeyup = function(event) {
-            var userGuess = event.key;
-            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-            var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",]
-
-            if (options.indexOf(userGuess) > -1) {
-
-                    if (userGuess === computerGuess) {
-                    wins++;
-                    numGuesses = 9;
-                    guessChoices = [];
-                }
-
-            else {
-                    if (guessChoices.includes(userGuess)) {
-                    // Code for duplicate guess
-                }
-
-            else {
-                numGuesses--;
-                guessChoices.push(userGuess);
-                }
-
-            if (numGuesses === 0) {
-                numGuesses = 9;
-                losses++;
-                guessChoices = [];
-                }   
-            }
-
-            }        
-        
-         var html = 
-            "<h1> The Psychic Game </h1>" +
-            "<p>Guess what letter I'm thinking of!</p>" +
-            "<p>Wins: " + wins + "</p>" +
-            "<p>Losses: " + losses + "</p>" +
-            "<p>Guesses Left: " + numGuesses + "</p>" +
-            "<p>Your Guesses so far: " + guessChoices.join(", ") + "</p>";
-            
-            document.querySelector("#game").innerHTML = html;
-            }   
-        
-    
-    </script>
+    <script type="text/javascript" src="assets\javascript\game.js"></script>
     
 </body>
 </html>        
